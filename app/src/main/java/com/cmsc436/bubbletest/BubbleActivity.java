@@ -269,8 +269,16 @@ public class BubbleActivity extends Activity implements Sheets.Host {
 
         writtenToSheets = true;
 
-        TextView resultScreen = (TextView) findViewById(R.id.showResult);
+        //TextView resultScreen = (TextView) findViewById(R.id.showResult);
 
+        Button bubbleTV = (Button) findViewById(R.id.balloons_tv);
+        Button secondsTV = (Button) findViewById(R.id.seconds_tv);
+        bubbleTV.setText(""+poppedBubbles);
+        secondsTV.setText(""+precision.format(result));
+        RelativeLayout resultScreen = (RelativeLayout) findViewById(R.id.resultScreen);
+        resultScreen.setVisibility(View.VISIBLE);
+
+        /*
         resultScreen.setText("You hit " + poppedBubbles + " bubbles.\n"
                         + "Your average tap response time was " + precision.format(result)
                         + " seconds.\n"
@@ -278,6 +286,7 @@ public class BubbleActivity extends Activity implements Sheets.Host {
         );
         resultScreen.setTextSize(40);
         resultScreen.setVisibility(View.VISIBLE);
+        */
     }
 
     public void initialLocation() {

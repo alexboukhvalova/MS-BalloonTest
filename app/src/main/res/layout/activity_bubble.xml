@@ -53,5 +53,44 @@
         android:background="@drawable/question_mark_no_bg"
         android:onClick="showInstructions"/>
 
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/resultScreen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
+        <RelativeLayout
+            android:id="@+id/resultsRowOne"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/promptOne"
+                style="@style/ResultsPrompt"
+                android:text="@string/promptOne" />
+            <Button
+                android:id="@+id/balloons_tv"
+                style="@style/ResultsCircle"
+                android:layout_toRightOf="@+id/promptOne"
+                android:text="0" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/resultsRowTwo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/resultsRowOne">
+
+            <TextView
+                android:id="@+id/promptTwo"
+                android:text="@string/promptTwo"
+                style="@style/ResultsPrompt"/>
+            <Button
+                android:id="@+id/seconds_tv"
+                android:text="0.00"
+                style="@style/ResultsCircle"
+                android:layout_toRightOf="@id/promptTwo"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
 
 </RelativeLayout>
